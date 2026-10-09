@@ -4,9 +4,162 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Juan Gutierrez</title>
+  <meta name="description" content="Juan Gutierrez is a software engineer and architect in Vermont with twenty years of experience building platforms that scale.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%23D98E04'/><text x='50' y='68' font-size='52' text-anchor='middle' font-family='Georgia' fill='%231F2A24'>J</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #F3F5F0;
+      --ink: #1F2A24;
+      --muted: #5E6A63;
+      --sage: #5B7A6A;
+      --marigold: #D98E04;
+      --line: #D7DDD5;
+      --display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
+      --body: "Source Serif 4", Georgia, "Times New Roman", serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --paper: #161D19;
+        --ink: #E8EDE7;
+        --muted: #9EAAA2;
+        --sage: #8FB09F;
+        --marigold: #F2B33D;
+        --line: #2C3630;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 1.125rem/1.7 var(--body); }
+    main { max-width: 40rem; margin: 0 auto; padding: 4.5rem 1.5rem 3rem; }
+    a { color: inherit; text-decoration-color: var(--marigold); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+    a:hover { color: var(--sage); }
+    a:focus-visible { outline: 3px solid var(--marigold); outline-offset: 3px; border-radius: 2px; }
+
+    /* Hero */
+    .portrait {
+      width: 7rem; height: 7rem; border-radius: 50%; object-fit: cover; display: block;
+      margin-bottom: 1.75rem; box-shadow: 0 0 0 4px var(--paper), 0 0 0 7px var(--marigold);
+    }
+    .hello {
+      font-family: var(--display); font-weight: 700;
+      font-size: clamp(3rem, 12vw, 5.5rem); line-height: 0.95; letter-spacing: -0.03em; margin: 0 0 1.75rem;
+    }
+    .hello span { display: block; color: var(--sage); font-weight: 400; font-size: 0.42em; letter-spacing: -0.01em; margin-bottom: 0.4em; }
+    .intro { font-size: 1.3rem; line-height: 1.6; margin: 0; }
+
+    section { margin-top: 4.5rem; }
+    h2 { font-family: var(--display); font-weight: 700; font-size: 1.6rem; letter-spacing: -0.015em; margin: 0 0 1.25rem; }
+    p { margin: 0 0 1.1rem; }
+
+    /* Experience timeline */
+    .timeline { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--line); }
+    .timeline > li { position: relative; padding: 0 0 2rem 1.5rem; }
+    .timeline > li:last-child { padding-bottom: 0; }
+    .timeline > li::before { content: ""; position: absolute; left: -7px; top: 0.55rem; width: 12px; height: 12px; border-radius: 50%; background: var(--paper); border: 2px solid var(--marigold); }
+    .timeline > li:first-child::before { background: var(--marigold); }
+    .when { font-family: var(--display); color: var(--muted); font-size: 0.95rem; }
+    .what { font-weight: 600; display: block; }
+    .timeline p { margin: 0.35rem 0 0; color: var(--muted); }
+    .highlights { margin: 0.75rem 0 0; padding-left: 1.1rem; color: var(--muted); }
+    .highlights li { margin-bottom: 0.35rem; }
+    .highlights li::marker { color: var(--marigold); }
+
+    /* Projects */
+    .projects { list-style: none; margin: 0; padding: 0; }
+    .projects li { padding: 1.1rem 0; border-top: 1px solid var(--line); }
+    .projects li:last-child { border-bottom: 1px solid var(--line); }
+    .projects a { font-family: var(--display); font-weight: 700; font-size: 1.15rem; }
+    .projects p { margin: 0.2rem 0 0; color: var(--muted); }
+
+    footer { max-width: 40rem; margin: 0 auto; padding: 2rem 1.5rem 4rem; color: var(--muted); }
+    footer p { margin: 0; }
+  </style>
 </head>
 <body>
-  <h1>Juan Gutierrez</h1>
-  <p>Software engineer. Site coming soon.</p>
+  <main>
+    <header>
+      <img class="portrait" src="https://avatars.githubusercontent.com/u/7672379?v=4" alt="Portrait of Juan Gutierrez" width="112" height="112">
+      <h1 class="hello"><span>Hi, I'm</span>Juan Gutierrez</h1>
+      <p class="intro">I've been building software for twenty years, sixteen of them at Ordergroove, where I joined as one of the first engineers when the whole company was thirteen people.</p>
+    </header>
+
+    <section aria-labelledby="about">
+      <h2 id="about">About</h2>
+      <p>I'm a software engineer and architect who likes the whole arc of a system: sketching it, building it, scaling it, and keeping it calm at three in the morning. These days that mostly means APIs, identity, and security: deciding how systems talk to each other, who they trust, and why.</p>
+      <p>I care as much about how teams work as how code works. I've spent years leading a team split between New York and Argentina from my home in Vermont, and I believe good engineering comes from clear thinking, shared ownership, and people who look out for each other.</p>
+      <p>This year I finished my M.S. in Computer Science at Columbia Engineering, twenty years after my B.S. from the same school. Away from the keyboard, you'll find me playing music, cooking, or reading about philosophy, psychology, and politics.</p>
+    </section>
+
+    <section aria-labelledby="experience">
+      <h2 id="experience">Experience</h2>
+      <ol class="timeline">
+        <li>
+          <span class="when">2026</span>
+          <span class="what">M.S. in Computer Science, Columbia Engineering</span>
+          <p>After taking Fundamentals of Distributed Systems, I came back as a course assistant for it, working with Prof. Roxana Geambasu.</p>
+        </li>
+        <li>
+          <span class="when">2010 – present</span>
+          <span class="what">Applications Architect, Ordergroove</span>
+          <p>Joined as one of the first engineers at a seed-stage startup and grew with it into a subscription commerce platform, becoming its first tech lead and then its first applications architect.</p>
+          <ul class="highlights">
+            <li>Spearhead our GraphQL APIs.</li>
+            <li>Shape how our internal and external systems authenticate and authorize each other, starting with how a principal is defined.</li>
+            <li>Shape application security decisions across the platform, including the work behind our move to PCI Level 1 compliance.</li>
+            <li>Helped build, scale, and support the order placement system that processes hundreds of thousands of orders for our clients.</li>
+            <li>Helped build and support the webhook and event notification system that keeps third parties in sync with our platform.</li>
+            <li>Co-invented a patent-pending IoT device that tracks product consumption.</li>
+          </ul>
+        </li>
+        <li>
+          <span class="when">2007 – 2010</span>
+          <span class="what">Software Engineer, Optimost (Autonomy)</span>
+          <p>Built features, integrations, and reporting for a multivariate web testing platform.</p>
+        </li>
+        <li>
+          <span class="when">2007</span>
+          <span class="what">B.S. in Computer Science, Columbia Engineering</span>
+        </li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="grad">
+      <h2 id="grad">Graduate work</h2>
+      <ul class="projects">
+        <li>
+          <a href="https://github.com/juannyG/coms6998-llms-final-project">Distributed training on commodity hardware</a>
+          <p>A study of how data, tensor, and pipeline parallelism and DeepSpeed ZeRO actually perform on PCIe-connected GPUs without NVLink, across models from 10M to 1B parameters. We found that only data parallelism and ZeRO Stage 1 scaled meaningfully on two GPUs, and that communication overwhelmed every strategy at four. Written with Can Kerem Akbulut and Rakene Chowdhury for Scaling LLMs: Systems, Optimization, and Emerging Paradigms, Fall 2025.</p>
+        </li>
+        <li>
+          <a href="https://github.com/juannyG/coms6998">Spotlight</a>
+          <p>A decentralized, Reddit-style community where creators earn a reputation token from upvotes that slowly decays over time, so newcomers get their turn in the light. Built on Solidity contracts with a Next.js front end and paywalled posts. I was the system architect on a team of five for <a href="https://verigu.github.io/6998Fall2024/">Engineering Blockchain and Web3 Apps</a>, Fall 2024.</p>
+        </li>
+      </ul>
+      <p style="margin-top:1.25rem;color:var(--muted)">My coursework also included <a href="https://systems.cs.columbia.edu/ds1-class/">distributed systems</a>, operating systems, programming languages and translators, and advanced software systems programming.</p>
+    </section>
+
+    <section aria-labelledby="projects">
+      <h2 id="projects">Open source</h2>
+      <p>I contribute upstream when I can, usually after running into something in my own work.</p>
+      <ul class="projects">
+        <li>
+          <a href="https://github.com/MongoEngine/mongoengine/pull/2914">MongoEngine</a>
+          <p>Contributed a fix for atomic increment and decrement updates, plus work on transaction support.</p>
+        </li>
+        <li>
+          <a href="https://github.com/oauthlib/oauthlib/pull/942">OAuthLib</a>
+          <p>Contributed a change that shipped in the 4.0 release.</p>
+        </li>
+      </ul>
+      <p style="margin-top:1.25rem;color:var(--muted)">Over the years I've also contributed to Django REST Framework and Celery, and given talks at PyGotham and the Burlington Python Meetup.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Find me on <a href="https://github.com/juannyG">GitHub</a> or <a href="https://www.linkedin.com/in/juan-gutierrez-9311795/">LinkedIn</a>.</p>
+  </footer>
 </body>
 </html>
