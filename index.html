@@ -5,34 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Juan Gutierrez</title>
   <meta name="description" content="Juan Gutierrez is a software engineer and architect in Vermont with twenty years of experience building platforms that scale.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%23D98E04'/><text x='50' y='68' font-size='52' text-anchor='middle' font-family='Georgia' fill='%231F2A24'>J</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%2358A6FF'/><text x='50' y='68' font-size='52' text-anchor='middle' font-family='Helvetica,Arial' font-weight='bold' fill='%230D1117'>J</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
+    /* GitHub-style dark palette */
     :root {
-      --paper: #F3F5F0;
-      --ink: #1F2A24;
-      --muted: #5E6A63;
-      --sage: #5B7A6A;
-      --marigold: #D98E04;
-      --line: #D7DDD5;
-      --display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
-      --body: "Source Serif 4", Georgia, "Times New Roman", serif;
+      color-scheme: dark;
+      --paper: #0D1117;
+      --ink: #E6EDF3;
+      --muted: #8B949E;
+      --sage: #58A6FF;
+      --marigold: #58A6FF;
+      --line: #30363D;
+      --display: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+      --body: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+      --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
     }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --paper: #161D19;
-        --ink: #E8EDE7;
-        --muted: #9EAAA2;
-        --sage: #8FB09F;
-        --marigold: #F2B33D;
-        --line: #2C3630;
-      }
-    }
+    .when, .term { font-family: var(--mono) !important; font-size: 0.85rem !important; }
+    .hello span { font-family: var(--mono); }
+    a:hover { color: var(--sage); text-decoration-color: var(--sage); }
     * { box-sizing: border-box; }
     html { -webkit-text-size-adjust: 100%; }
-    body { margin: 0; background: var(--paper); color: var(--ink); font: 1.125rem/1.7 var(--body); }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 1.0625rem/1.65 var(--body); }
     main { max-width: 40rem; margin: 0 auto; padding: 4.5rem 1.5rem 3rem; }
     a { color: inherit; text-decoration-color: var(--marigold); text-decoration-thickness: 2px; text-underline-offset: 3px; }
     a:hover { color: var(--sage); }
@@ -73,6 +69,9 @@
     .projects li:last-child { border-bottom: 1px solid var(--line); }
     .projects a { font-family: var(--display); font-weight: 700; font-size: 1.15rem; }
     .projects p { margin: 0.2rem 0 0; color: var(--muted); }
+    .projects p a { font-family: inherit; font-weight: inherit; font-size: inherit; }
+    .term { font-family: var(--display); color: var(--muted); font-size: 0.95rem; margin-left: 0.5rem; }
+    .sub { font-family: var(--display); font-weight: 700; font-size: 1.15rem; color: var(--sage); margin: 2.75rem 0 0.25rem; }
 
     footer { max-width: 40rem; margin: 0 auto; padding: 2rem 1.5rem 4rem; color: var(--muted); }
     footer p { margin: 0; }
@@ -139,7 +138,25 @@
           <p>A decentralized, Reddit-style community where creators earn a reputation token from upvotes that slowly decays over time, so newcomers get their turn in the light. Built on Solidity contracts with a Next.js front end and paywalled posts. I was the system architect on a team of five for <a href="https://verigu.github.io/6998Fall2024/">Engineering Blockchain and Web3 Apps</a>, Fall 2024.</p>
         </li>
       </ul>
-      <p style="margin-top:1.25rem;color:var(--muted)">My coursework also included <a href="https://systems.cs.columbia.edu/ds1-class/">distributed systems</a>, operating systems, programming languages and translators, and advanced software systems programming.</p>
+      <h3 class="sub">Coursework</h3>
+      <ul class="projects">
+        <li>
+          <a href="https://cs4157.github.io/www/2025-1/">Advanced Systems Programming</a><span class="term">Spring 2025</span>
+          <p>Built a <a href="https://cs4157.github.io/malloctopus/">memory allocator</a> that grows from a bump allocator into segregated free lists, a <a href="https://cs4157.github.io/greptile/">multithreaded grep</a> fed by a bounded ring buffer, a <a href="https://cs4157.github.io/cowchat/">chat server</a> that hands live client sockets to other server processes, a <a href="https://cs4157.github.io/ladebug/">ptrace debugger</a> with breakpoints and stack backtraces, a <a href="https://cs4157.github.io/seald/">static linker</a> that emits runnable ELF executables, and a <a href="https://cs4157.github.io/zookeeper/">rootless container runtime</a> built on namespaces, cgroups, and seccomp.</p>
+        </li>
+        <li>
+          <a href="https://verigu.github.io/4115Spring2024/">Programming Languages and Translators</a><span class="term">Spring 2024</span>
+          <p>Designed a programming language with a team and built its compiler, from scanner and parser through semantic checking and code generation.</p>
+        </li>
+        <li>
+          <a href="https://cs4118.github.io/www/2023-1/">Operating Systems</a><span class="term">Spring 2023</span>
+          <p>Worked inside the Linux kernel: a <a href="https://cs4118.github.io/tabletop/">system call</a> that inspects another process's open files, a <a href="https://cs4118.github.io/freezer/">round-robin scheduler</a> with multi-CPU load balancing, a <a href="https://cs4118.github.io/farfetchd/">page-table walk</a> that reads and writes another process's memory, and a <a href="https://cs4118.github.io/pantryfs/">filesystem driver</a> with directories and hard and symbolic links. In user space, I grew a <a href="https://cs4118.github.io/multi-server/">web server</a> from forked processes to thread pools to a pre-forked pool that passes sockets between processes.</p>
+        </li>
+        <li>
+          <a href="https://systems.cs.columbia.edu/ds1-class/">Fundamentals of Distributed Systems</a>
+          <p>Took the course, then came back as a course assistant.</p>
+        </li>
+      </ul>
     </section>
 
     <section aria-labelledby="projects">
